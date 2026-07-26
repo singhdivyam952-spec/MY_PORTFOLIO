@@ -1,0 +1,24 @@
+---
+title: "RAG Systems That Work in Production"
+description: "How to design retrieval-augmented generation pipelines that stay accurate, fast, and trustworthy for enterprise teams."
+date: "2025-11-12"
+tags: ["AI", "RAG", "LLMs"]
+---
+
+Enterprise teams do not need another chatbot demo. They need answers grounded in their documents—with citations, latency budgets, and operational reliability.
+
+## Start with the business question
+
+Before choosing a vector database, define who asks what, how wrong answers are handled, and what “good enough” means for trust. RAG quality is a product problem first.
+
+## Ingestion is half the system
+
+Chunking strategy, metadata, and refresh cadence determine retrieval quality more than prompt cleverness. Prefer semantic chunks with stable IDs and clear source attribution.
+
+## Retrieval then generation
+
+Hybrid search (keyword + vector), reranking, and source filters reduce hallucinations. Stream responses for UX, but never skip citation surfaces for high-stakes domains.
+
+## Evaluate continuously
+
+Offline golden sets and online feedback loops catch regressions when models or corpora change. Production AI without evaluation is guesswork.

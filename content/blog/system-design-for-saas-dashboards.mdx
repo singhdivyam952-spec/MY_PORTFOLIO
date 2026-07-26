@@ -1,0 +1,24 @@
+---
+title: "System Design for SaaS Dashboards"
+description: "Practical system design choices for multi-tenant analytics dashboards that stay fast as data grows."
+date: "2026-01-18"
+tags: ["System Design", "SaaS", "React"]
+---
+
+Dashboards fail when they try to be a live query against every fact table. Design for the questions users ask most.
+
+## Aggregate early
+
+Materialized views, scheduled rollups, and cache layers keep p95 latency low. Real-time is a product decision, not a default.
+
+## Multi-tenant boundaries
+
+Tenant isolation belongs in auth, query filters, and storage strategy. Leaks are not “edge cases”—they are product-ending failures.
+
+## Frontend as a consumer
+
+React dashboards should fetch stable API contracts, not reconstruct business logic in the browser. Empty and loading states are part of trust.
+
+## Iterate with metrics
+
+Instrument which widgets are used. Kill unused charts. Performance work without usage data is decoration.

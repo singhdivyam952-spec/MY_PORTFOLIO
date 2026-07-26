@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs><linearGradient id="a" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="hsl(230 45% 35%)"/><stop offset="100%" stop-color="hsl(230 50% 20%)"/>
+  </linearGradient></defs>
+  <rect width="200" height="200" rx="100" fill="url(#a)"/>
+  <text x="100" y="118" text-anchor="middle" fill="white" font-family="Segoe UI, Arial" font-size="56" font-weight="700">AR</text>
+</svg>

@@ -1,0 +1,20 @@
+---
+title: "Docker and CI/CD Without the Ceremony"
+description: "A lean approach to containers and pipelines that keeps releases boring and reversible."
+date: "2026-03-21"
+tags: ["Docker", "CI/CD", "Cloud"]
+---
+
+Shipping should be routine. If releases feel like events, the pipeline is incomplete.
+
+## One image, many environments
+
+Build once, configure with environment variables, and keep secrets out of the image. Nginx and process managers exist to make that predictable.
+
+## Tests that gate merges
+
+Lint, typecheck, and critical path tests on every PR. Skip vanity coverage theater; protect the flows that move money and data.
+
+## Deploy with rollback
+
+Blue/green or simple previous-tag rollbacks beat heroic debugging at midnight. Observability after deploy is part of the release, not an afterthought.

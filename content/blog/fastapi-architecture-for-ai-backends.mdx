@@ -1,0 +1,24 @@
+---
+title: "FastAPI Architecture for Scalable AI Backends"
+description: "Patterns for structuring FastAPI services that power LLM apps, agents, and high-throughput APIs."
+date: "2025-12-03"
+tags: ["Python", "FastAPI", "Architecture"]
+---
+
+FastAPI is an excellent foundation for AI products—if you treat it like a production system, not a notebook with routes.
+
+## Separate sync work from model calls
+
+Keep request handlers thin. Push embeddings, scraping, and long-running agent steps into workers or async queues so API latency stays predictable.
+
+## Contracts first
+
+Typed request/response models, consistent error shapes, and auth middleware pay for themselves the week a second client appears.
+
+## Observability is mandatory
+
+Trace prompts, token usage, and retrieval hits. When something fails in production, you need the path from user question to model output—not a stack of prints.
+
+## Deploy like software
+
+Docker, health checks, migrations, and CI are part of AI delivery. The model is only one dependency among many.

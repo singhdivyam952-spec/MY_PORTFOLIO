@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Divyam Singh — Portfolio
 
-## Getting Started
+Premium portfolio website for **Divyam Singh**, Senior AI & Full-Stack Software Engineer.
 
-First, run the development server:
+Built with Next.js, TypeScript, Tailwind CSS, shadcn/ui, Framer Motion, and Resend.
+
+## Features
+
+- Dark / light theme with premium glass UI
+- Conversion-focused landing page (hero → contact)
+- Project case studies, MDX blog, FAQ, testimonials
+- Contact form with Zod validation + Resend email delivery
+- SEO: metadata, Open Graph, JSON-LD, sitemap, robots
+- Vercel Analytics ready
+
+## Getting started
 
 ```bash
+npm install
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Variable | Required | Description |
+|---|---|---|
+| `RESEND_API_KEY` | For live form | Resend API key |
+| `CONTACT_TO_EMAIL` | No (defaults) | Inbox for inquiries (`singhdivyam952@gmail.com`) |
+| `CONTACT_FROM_EMAIL` | No | Verified Resend from address |
+| `NEXT_PUBLIC_SITE_URL` | Recommended | Canonical site URL for SEO |
 
-## Learn More
+Without `RESEND_API_KEY`, the contact API returns a friendly 503 and asks visitors to email directly.
 
-To learn more about Next.js, take a look at the following resources:
+## Content & assets
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Site copy / data: `src/content/`
+- Blog posts (MDX): `content/blog/`
+- Placeholders: `public/` (profile, projects, avatars, logos, `resume.pdf`)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Swap placeholder SVGs and `public/resume.pdf` with your real assets when ready.
+
+## Scripts
+
+```bash
+npm run dev      # development
+npm run build    # production build
+npm run start    # start production server
+npm run lint     # eslint
+```
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Push this repo to GitHub
+2. Import the project in Vercel
+3. Add env vars from `.env.example`
+4. Deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Update `NEXT_PUBLIC_SITE_URL` to your production domain after DNS is live.
+
+## Stack
+
+- Next.js 16 (App Router) + React 19
+- TypeScript
+- Tailwind CSS v4 + shadcn/ui
+- Framer Motion
+- React Hook Form + Zod
+- next-mdx-remote
+- Resend
+- Vercel Analytics

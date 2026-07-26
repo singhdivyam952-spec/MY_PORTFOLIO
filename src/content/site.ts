@@ -8,7 +8,7 @@ export const siteConfig = {
   phone: "+91 98158 61601",
   phoneHref: "tel:+919815861601",
   linkedin: "https://linkedin.com/in/divyam-singh-83337929b",
-  github: "https://github.com/",
+  github: "https://github.com/singhdivyam952-spec",
   availability:
     "Available for Freelance, Contract, Remote, and Full-Time Opportunities",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://divyamsingh.dev",
